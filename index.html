@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>雲端 FPS Demo</title>
+  <style>
+    body{margin:0;overflow:hidden;background:#000;color:#fff;font-family:sans-serif}
+    #ui{position:fixed;top:0;left:0;z-index:9;background:#000c;padding:6px;font-size:12px}
+    #joystick{position:fixed;bottom:30px;left:30px;width:120px;height:120px;border:2px solid #fff4;border-radius:50%}
+    #stick{width:40px;height:40px;background:#fff8;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+    #fire{position:fixed;bottom:40px;right:40px;width:70px;height:70px;background:#f005;border-radius:50%}
+  </style>
+</head>
+<body>
+  <div id="ui">Loading…</div>
+  <div id="joystick"><div id="stick"></div></div>
+  <div id="fire"></div>
+
+  <!-- Three.js 最小 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/controls/PointerLockControls.js"></script>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
